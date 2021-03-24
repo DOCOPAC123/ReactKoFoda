@@ -1,0 +1,13 @@
+useState
+  * Alwasy for safe side, in the useState hook, pass the function to update
+  the value. Don't just update directly, but instead update it using
+  function.
+  e.g..: setCount(prevCount => prevCount + 1);
+
+useState with Object
+* const [name, updateName] = useState({firstName : '', lastName : ''})
+* useState does not automatically merge the objet. In setState(class Component), the state in
+  merged whereas in here we have to do it manually using the spread operator.
+  e.g.., setName({...name, firstName : e.target.value})
+  Reading the above is : copy every propety in the name object and then just override the
+  firstName field with a different value.

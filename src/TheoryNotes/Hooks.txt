@@ -1,0 +1,15 @@
+                    *** Rules of Hooks ***
+
+* Only call Hooks at the Top level
+* Don't call Hooks inside loops, conditions or nested functions.
+
+* Only call Hooks from React functions
+* Call them within React Functional components and not just any regular
+  Javascript functions.
+
+
+useState
+  * Alwasy for safe side, in the useState hook, pass the function to update
+  the value. Don't just update directly, but instead update it using
+  function.
+  e.g..: setCount(prevCount => prevCount + 1);
