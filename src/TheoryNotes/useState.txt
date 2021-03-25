@@ -11,3 +11,23 @@ useState with Object
   e.g.., setName({...name, firstName : e.target.value})
   Reading the above is : copy every propety in the name object and then just override the
   firstName field with a different value.
+
+useState with Arrays
+* For arrays, appending a new value to array. First make a new copy of array using
+  spread operator and then append a new value to the copied array.
+  e.g.., setItems([...items, {
+    id : items.length,
+    value : Math.floor(Math.random() * 10) + 1
+  }])
+
+Notes : 
+* The useState hook lets you add to functional Components.
+* In classes, the state is always an object.
+* With the useState hook, the state doesn't have to be an object
+* The useState hook returns an array with 2 elements.
+* The first element is the current value of the state, and the second element is 
+  a state setter function.
+* In case, new state value depends on the previous state value? You can pass a 
+  function to the stter function.
+* When dealing with objects or arrays, always make sure to spread your state variable
+  and then call the setter function.
