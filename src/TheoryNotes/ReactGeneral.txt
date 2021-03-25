@@ -1,3 +1,8 @@
 * To create a new React App : 
     * npm installed in the system.
     * Then, run command in terminal : npx create-react-app my-app
+
+* React LifeCycle Methods : 
+    - componentDidMount()
+    - componentDidUpdate()
+    - componentWillUnmount()
