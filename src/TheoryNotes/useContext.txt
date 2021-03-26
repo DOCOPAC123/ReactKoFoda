@@ -1,0 +1,26 @@
+* useContext simplifies context consumption.
+* Previous scenario : 
+    import {UserContext, ChannelContext} from "../App";
+    return(
+        <div>
+            <UserContext.Consumer>
+                {
+                    user => {
+                        return (
+                            <div>
+                                UserName is {user}
+                            </div>
+                        )
+                    }
+                }
+            </UserContext.Consumer>
+        </div>
+    )
+
+* Current scenario using Hooks useContext
+    import {UserContext, ProjectContext} from "../App";
+    const user = useContext(UserContext);
+    cosnt project = UserContext(ProjectContext);
+
+    // and then directly use them wherever you want
+
